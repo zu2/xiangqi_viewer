@@ -24,7 +24,7 @@ XiangqiViewer.BoardRenderer = function(selector, cellSize, strokeWidth) {
   var riverBot = Math.ceil(BOARD_HEIGHT/2) * cellSize + MARGIN;
   var dotDistance = 2 * strokeWidth;
 
-  $(selector).append('<svg width=' + width + ' height=' + height + '/>');
+  jQuery(selector).append('<svg width=' + width + ' height=' + height + '/>');
   var root = Snap(selector + ' svg');
   var highlighted = [];
 
@@ -150,7 +150,7 @@ XiangqiViewer.BoardRenderer = function(selector, cellSize, strokeWidth) {
 };
 
 XiangqiViewer.Board = function(selector, cellSize, strokeWidth, ui) {
-  var element = $(selector);
+  var element = jQuery(selector);
   var renderer = new XiangqiViewer.BoardRenderer(selector, cellSize, strokeWidth);
   renderer.draw();
 
@@ -362,7 +362,9 @@ XiangqiViewer.Board = function(selector, cellSize, strokeWidth, ui) {
   var pieceLegend = {
     r: XiangqiViewer.Chariot,
     h: XiangqiViewer.Horse,
+    n: XiangqiViewer.Horse,
     e: XiangqiViewer.Elephant,
+    b: XiangqiViewer.Elephant,
     a: XiangqiViewer.Advisor,
     k: XiangqiViewer.General,
     p: XiangqiViewer.Pawn,
@@ -460,12 +462,12 @@ XiangqiViewer.Board = function(selector, cellSize, strokeWidth, ui) {
 }
 
 XiangqiViewer.UIRenderer = function(element, board) {
-  var moveViewer = $('<div class="xqv-move-viewer" style="position:relative;"></div>');
-  var prevButton = $('<input type="button" class="xqv-prev-move" value="<-" style="float: left;">');
-  var nextButton = $('<input type="button" class="xqv-next-move" value="->" style="float: left;">');
-  var currentMove = $('<div class="xqv-current-move" style="float: left; margin-left: 10px;"></div>');
-  var analysisLabel = $('<div class="xqv-analysis-label" style="clear: both; padding-top: 10px;">Notes:</div>');
-  var analysis = $('<textarea class="xqv-analysis" style="margin-top: 10px; width: 100%; height: 100px;" readonly/>');
+  var moveViewer = jQuery('<div class="xqv-move-viewer" style="position:relative;"></div>');
+  var prevButton = jQuery('<input type="button" class="xqv-prev-move" value="<-" style="float: left;">');
+  var nextButton = jQuery('<input type="button" class="xqv-next-move" value="->" style="float: left;">');
+  var currentMove = jQuery('<div class="xqv-current-move" style="float: left; margin-left: 10px;"></div>');
+  var analysisLabel = jQuery('<div class="xqv-analysis-label" style="clear: both; padding-top: 10px;">Notes:</div>');
+  var analysis = jQuery('<textarea class="xqv-analysis" style="margin-top: 10px; width: 100%; height: 100px;" readonly/>');
   moveViewer.append(prevButton);
   moveViewer.append(nextButton);
   moveViewer.append(currentMove);

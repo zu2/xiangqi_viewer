@@ -48,8 +48,8 @@ The piece codes are as follows:
 | Code | Red piece | Black piece |
 | ---- | --------- | ----------- |
 | r | 俥 | 車 |
-| h | 傌 | 馬 |
-| e | 相 | 象 |
+| h,n | 傌 | 馬 |
+| e,b | 相 | 象 |
 | a | 仕 | 士 |
 | k | 帥 | 將 |
 | p | 兵 | 卒 |
