@@ -55,6 +55,12 @@ The piece codes are as follows:
 | p | 兵 | 卒 |
 | c | 炮 | 砲 |
 
+Or use FEN setup:
+
+```javascript
+board.fenSetup("rnbakab1r/9/1c4nc1/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1N2/9/RNBAKAB1R b - - 0 2");
+```
+
 Or use the default positioning:
 
 ```javascript
