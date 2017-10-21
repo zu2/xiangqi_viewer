@@ -1,6 +1,7 @@
 var XiangqiViewer = {}
 window.XiangqiViewer = XiangqiViewer;
-XiangqiViewer.imageDir = "images/xiangqi_viewer/";
+//XiangqiViewer.imageDir = "images/xiangqi_viewer/";
+XiangqiViewer.imageDir = "wp-content/plugins/xiangqi_viewer/images/xiangqi_viewer/";
 
 XiangqiViewer.BoardRenderer = function(selector, cellSize, strokeWidth) {
   var BOARD_WIDTH = 8;
